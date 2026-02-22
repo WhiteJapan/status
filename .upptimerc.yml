@@ -1,27 +1,25 @@
-# Change these first
+# 自分のユーザー名とリポジトリ名
 owner: WhiteJapan
 repo: status
+
 sites:
   - name: KBS Project
+    # リポジトリではなく、公開されているWebサイトのURLがおすすめ
     url: https://github.com/WhiteJapan/kamohara-broadcasting-system
-    port: 80
-    check: "tcp-ping"
-    ipv6: true
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
+  # カスタムドメイン（自分で買ったドメイン）を持っていないなら cname は消す！
+  # cname: demo.upptime.js.org 
+  
+  # 代わりに自分のリポジトリ名をここに入れる（先頭の / を忘れずに）
+  baseUrl: /status
+  
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  name: KBS Status Page
+  introTitle: "KBS（Kamohara Broadcasting System）の稼働状況"
+  introMessage: このページでは、システムの稼働状況をリアルタイムで公開しているよ。
   navbar:
     - title: Status
-      href: /
+      href: /status
     - title: GitHub
-      href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+      href: https://github.com/WhiteJapan/kamohara-broadcasting-system
